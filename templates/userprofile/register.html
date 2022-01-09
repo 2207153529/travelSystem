@@ -1,0 +1,51 @@
+{% load static %}
+{% block title %} 注册 {% endblock title %}
+{% block content %}
+
+
+
+<!-- Meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- //Meta tags -->
+<link rel="stylesheet" href="{% static 'css/register_style.css' %}" type="text/css" media="all" /><!-- Style-CSS -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"><!-- font-awesome-icons -->
+<section class="w3l-form-36">
+    <div class="form-36-mian section-gap">
+        <div class="wrapper">
+            <div class="form-inner-cont">
+                <h3>Create your account</h3>
+                <form action="#" method="post" class="signin-form">
+                    {% csrf_token %}
+                    <div class="form-input">
+                        <span class="fa fa-user-o" aria-hidden="true"></span>
+                        <input type="text" name="username" id="username" placeholder="Username" required />
+                    </div>
+                    <div class="form-input">
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                        <input type="email" name="email" id="email" placeholder="Email" required />
+                    </div>
+                    <div class="form-input">
+                        <span class="fa fa-key" aria-hidden="true"></span>
+                        <input type="password" name="password" id="password" placeholder="Password" required />
+                    </div>
+                    <div class="form-input">
+                        <span class="fa fa-key" aria-hidden="true"></span>
+                        <input type="password" name="password2" id="password2" placeholder="Confirm Password" required />
+                    </div>
+                    <div class="login-remember d-grid">
+                        <label class="check-remaind">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <p class="remember">Remember me</p>
+                        </label>
+                        <button class="btn theme-button">Signup</button>
+                    </div>
+                </form>
+                <p class="signup">Already a member? <a href="{% url 'userprofile:login' %}" class="signuplink">Login</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

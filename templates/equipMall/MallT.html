@@ -1,0 +1,672 @@
+<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+.demo {
+    padding: 2em 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#accordion .panel {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 30px 10px 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#accordion .panel-heading {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    position: relative;
+}
+
+#accordion .panel-title a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0;
+    background: #fe7725;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 0;
+    position: relative;
+}
+
+#accordion .panel-title a.collapsed {
+    background: #1c2336;
+}
+
+#accordion .panel-title a:before,
+#accordion .panel-title a.collapsed:before {
+    content: "\f068";
+    font-family: fontawesome;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 50%;
+    background: #fe7725;
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+#accordion .panel-title a.collapsed:before {
+    content: "\f067";
+    background: #ababab;
+    border: 4px solid #626262;
+}
+
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after {
+    content: "";
+    width: 17px;
+    height: 7px;
+    background: #fff;
+    position: absolute;
+    top: 22px;
+    right: 0;
+}
+
+#accordion .panel-title a.collapsed:after {
+    width: 19px;
+    background: #ababab;
+}
+
+#accordion .panel-body {
+    border-left: 3px solid #fe7725;
+    border-top: none;
+    background: #fff;
+    font-size: 15px;
+    color: #1c2336;
+    line-height: 27px;
+    position: relative;
+}
+
+#accordion .panel-body:before {
+    content: "";
+    height: 3px;
+    width: 50%;
+    background: #fe7725;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+</style>
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load static %}
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+首页
+{% endblock title %}
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+<!-- 定义放置文章标题的div容器 -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                户外仪器
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/52504328926.html" target='blank'>
+                                                        <img src="{% static 'python/pics/4ffff500bf99f038.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">本店延保两年【质保三年】促销【保障】【顺丰送货上门】</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥1980.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/27393183454.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5ad856ceN7028acf0.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">深达威 望远镜测距仪SW-600A SW-1500A激光高精度红外线户外高尔夫手持电子测量...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥418.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/34256910826.html" target='blank'>
+                                                        <img src="{% static 'python/pics/6b24cbf145c6fd35.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">手推车 电子数显滚尺机械测距仪 户外高精度测量仪器 迷你机械小轮</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥72.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/65538591326.html" target='blank'>
+                                                        <img src="{% static 'python/pics/d32e2c7c7e7de047.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">非一次性雨衣</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥29.90</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                户外服装
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/30966208149.html" target='blank'>
+                                                        <img src="{% static 'python/pics/0e8c0350e19cbcd3.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">收货后不满意联系我包邮给您退换</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥85.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/15194985252.html" target='blank'>
+                                                        <img src="{% static 'python/pics/598ff009Nf78449e6.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">正品保证，假一罚十，领券下单更优惠，任何质量问题30天内包退换，支持货到付款量大优...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥85.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/64795958599.html" target='blank'>
+                                                        <img src="{% static 'python/pics/0c37a5e399389ff4.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">外套男2019春秋季夹克男工装新品男士外套潮流衣服褂子男韩版宽松服饰外衣春秋上...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥158.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/42900003599.html" target='blank'>
+                                                        <img src="{% static 'python/pics/4402e58c641d45d5.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">您不满意，我来免单</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥85.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                滑雪
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/10101835337.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5684ad27Na01bea08.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">买滑雪镜送镜盒/镜布/镜袋和防寒套脖(颜色随机)多买多送,送完为止防寒套脖(颜色随机)...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥168.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/62661607399.html" target='blank'>
+                                                        <img src="{% static 'python/pics/4a7acba32b6972c5.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">儿童滑雪护具轮滑护臀防摔花样滑冰溜真冰轮滑护屁垫护膝护肘 蓝色（20-60斤）</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥55.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/100000696256.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5bbc83d2Ne1b7308d.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">【官方配件】可“隐形”自拍杆，轻松拍摄类无人机效果，可搭配骑行/摩托车/滑雪...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥69.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/19157402140.html" target='blank'>
+                                                        <img src="{% static 'python/pics/585b3325cbbfe831.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">可发货，顺丰包邮赠板包鞋包【备注雪鞋雪杖尺码或客服留言】点击查看更多雪板套餐</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥2380.00</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                登山鞋
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/11202187.html" target='blank'>
+                                                        <img src="{% static 'python/pics/rBEQWFFMHgAIAAAAAArlrW0yNrgAACpAQO-efcACuXF443.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">肖恩·潘执著十年编导同名电影！杰出探险类作家乔恩·克拉考尔成名作，长踞《纽约时报...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥42.90</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12074294.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5837a65dN33b088a0.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">在大自然中，学会与山相处，享受自在，并对自己负责，32条登山者必知必晓的「野外生存之道」...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥47.30</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12387934.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5b2b1ddaN88c50883.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">200多种结绳技法，搭配超过1200张高清步骤图 国际结绳者协会联合创始人为您带来结绳大百科</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">￥135.20</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12557811.html" target='blank'>
+                                                        <img src="{% static 'python/pics/7d1744e7845d02c2.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">一套全面的身心训练解决方案：力量耐力营养心理承受力自卫。...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥43.80</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                露营
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/11202187.html" target='blank'>
+                                                        <img src="{% static 'python/pics/rBEQWFFMHgAIAAAAAArlrW0yNrgAACpAQO-efcACuXF443.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">肖恩·潘执著十年编导同名电影！杰出探险类作家乔恩·克拉考尔成名作，长踞《纽约时报...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥42.90</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12074294.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5837a65dN33b088a0.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">在大自然中，学会与山相处，享受自在，并对自己负责，32条登山者必知必晓的「野外生存之道」...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥47.30</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12387934.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5b2b1ddaN88c50883.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">200多种结绳技法，搭配超过1200张高清步骤图 国际结绳者协会联合创始人为您带来结绳大百科</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">￥135.20</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12557811.html" target='blank'>
+                                                        <img src="{% static 'python/pics/7d1744e7845d02c2.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">一套全面的身心训练解决方案：力量耐力营养心理承受力自卫。...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥43.80</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                登山背包
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/11202187.html" target='blank'>
+                                                        <img src="{% static 'python/pics/rBEQWFFMHgAIAAAAAArlrW0yNrgAACpAQO-efcACuXF443.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">肖恩·潘执著十年编导同名电影！杰出探险类作家乔恩·克拉考尔成名作，长踞《纽约时报...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥42.90</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12074294.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5837a65dN33b088a0.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">在大自然中，学会与山相处，享受自在，并对自己负责，32条登山者必知必晓的「野外生存之道」...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥47.30</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12387934.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5b2b1ddaN88c50883.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">200多种结绳技法，搭配超过1200张高清步骤图 国际结绳者协会联合创始人为您带来结绳大百科</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">￥135.20</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12557811.html" target='blank'>
+                                                        <img src="{% static 'python/pics/7d1744e7845d02c2.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">一套全面的身心训练解决方案：力量耐力营养心理承受力自卫。...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥43.80</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!----------------------------------户外书籍-------------------------------------------------->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                户外书籍
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body">
+                            <p>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/11202187.html" target='blank'>
+                                                        <img src="{% static 'python/pics/rBEQWFFMHgAIAAAAAArlrW0yNrgAACpAQO-efcACuXF443.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">肖恩·潘执著十年编导同名电影！杰出探险类作家乔恩·克拉考尔成名作，长踞《纽约时报...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥42.90</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12074294.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5837a65dN33b088a0.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">在大自然中，学会与山相处，享受自在，并对自己负责，32条登山者必知必晓的「野外生存之道」...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥47.30</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12387934.html" target='blank'>
+                                                        <img src="{% static 'python/pics/5b2b1ddaN88c50883.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">200多种结绳技法，搭配超过1200张高清步骤图 国际结绳者协会联合创始人为您带来结绳大百科</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">￥135.20</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="jumbotron well">
+                                                    <a href="//item.jd.com/12557811.html" target='blank'>
+                                                        <img src="{% static 'python/pics/7d1744e7845d02c2.jpg' %}" style="border-radius:20px;
+                            width:300px;height:300px" />
+                                                        <p style="color:black; font-size:20px;">一套全面的身心训练解决方案：力量耐力营养心理承受力自卫。...</p>
+                                                        <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">¥43.80</span></p>
+                                                    </a>
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------户外书籍结束-------------------------------------------------->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+<!---------------失败的尝试,django模板的循环功能太少了，最后决定做成静态页面
+{% for cell in cells %}                            
+{% if cell.tag == '户外服装' %}
+    <p>{{ forloop.counter }}:{{ cell }}</p>
+    <div class="col-md-6 column">
+        <div class="jumbotron well">
+            <a href={{ cell.link }} target='blank'>
+                <img src="{% static 'python/pics/' %}{{ cell.identification }}.jpg" style="border-radius:20px;
+                width:300px;height:300px"/>
+                <p style="color:black; font-size:20px;">{{ cell.name|slice:'25' }}...</p>
+                <p style="font-weight:bold;font-size:25px">价格：<span style="color:red;font-size:35px;font-weight:bold">{{ cell.price }}</span></p>
+            </a>
+            <p>
+                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+---------------->

@@ -1,0 +1,62 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load static %}
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+{{ article.title }}
+{% endblock title %}
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+<!-- 文章详情 -->
+<div class="container">
+     <div class="breadcrumb">
+        <p>您当前所在位置: </p>
+        <a class="breadcrumb-item" href="{% url 'index:index_list' %}">Home</a>
+        <a class="breadcrumb-item" href="{% url 'article:ArticleList' %}">攻略</a>
+        <a class="breadcrumb-item" href="#">{{ article.title }}</a>
+    </div>
+    <div class="row">
+        <!-- 标题及作者 -->
+        <h1 class="col-12 mt-4 mb-4">{{ article.title }}</h1>
+        <!-- <div class="col-12 alert alert-success">作者：{{ article.author }}</div> -->
+        <div class="col-12 alert alert-success">作者：{{ article.author }}
+            . <a href="{% url 'article:ArticleUpdate' article.id %}" onclick="Edit">编辑本文</a>
+            · <a href="#" onclick="ConfirmDelete()">删除本文</a>
+            <!-- {% if user.is_authenticated %} -->
+            <!-- 新增一个隐藏表单 -->
+            <form style="display: none;" id="Delete" action='{% url "article:ArticleDelete" article.id %}' method="POST">
+                {% csrf_token %}
+                <button type="submit">发送</button>
+            </form>
+            <!--              <form style="display: none;" id="Edit" action='{% url "article:ArticleUpdate" article.id %}' method="POST">
+                {% csrf_token %}
+                <button type="submit">发送</button>
+            </form> -->
+            <!-- {% endif %} -->
+        </div>
+        <!-- 文章正文 -->
+        <div class="col-12">
+            <!-- 加上safe过滤器 不需要转义-->
+            {%autoescape off%}
+            <p>{{ article.body|safe }}</p>
+            {% endautoescape %}
+        </div>
+    </div>
+</div>
+<script>
+function ConfirmDelete() {
+    // body...
+    // alert("sss")
+    layer.open({
+        title: "确认删除",
+        content: "是否删除这篇文章",
+        yes: function(index, layero) {
+            // body...
+            $('form#Delete button').click();
+            layer.close(index);
+            // location.href = '{% url "article:ArticleDelete" article.id %}'
+        },
+    })
+}
+</script>
+{% endblock content %}
